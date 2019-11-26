@@ -1,63 +1,95 @@
-<?php
-?>
+
 <html>
 <head>
-<title>log-in page</title> 
-    <link rel="stylesheet" type="text/css" href="loginstyle.css">
-<body>
-    <div class="loginbox">
-    <img src="avatar.png" class="avatar">
-    <div class="form">
-        <form class="login-form" action="loginconnect.php" method="post">
-        <h1>Log-in</h1>
-        <p>Username</p>
-        <input type="text" name="username" placeholder="Username" required>
-        <p>Password</p>
-        <input type="password" name="password" placeholder="Enter Password" required>
-        <input type="submit" name="" value="Login">
-         <p class="message1"><a href="#">Create Account</a></p>
-        <p class="message2"><a href="forgot.php">Forgot Password?</a>
-        </p>
-      </form>
-
-        <div class="form">
-        <form class="registerform" action="connect.php" method="post">
-        <h1>Register</h1>
-        <p>Fullname</p>
-        <input type="text" name="fullname" onkeyup="this.value = this.value.toUpperCase();" placeholder="Fullname" required>
-        <p>Student Number</p>
-        <input type="text" pattern="[0-9]{8,10}" name="studentnumber" placeholder="Student Number" required>
-        <p>Year/Course/Section</p>
-        <input type="text" name="year" onkeyup="this.value = this.value.toUpperCase();" placeholder="Year Course/Section" required>
-        <input type="hidden" name="usertype" value="user">   
-        <p>Email Address</p>
-        <input type="text" name="email" placeholder="Email Address" required> 
-        <p>Username</p>
-        <input type="text" name="username" placeholder="Username" required>
-        <p>Password</p>
-        <input type="password" name="password" placeholder="Enter Password" required>
-        <input type="submit" name="" value="Register">
-        
-
-        <p class="message1"><a href="#">Return to Login</a></p>
-
-            
-            </form>
-        </div>
-    </div>
-         </div>
-    <script src='https://code.jquery.com/jquery-3.4.1.min.js'>
-    </script>
-    
-    <script>
-    $('.message1 a').click(function()
-    {
-     $('form').animate({height:"toggle",opacity:"toggle"},"slow");}
-    );
-    </script>
-    
-
-   
-</body>
+<title>Library Website</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="design/design.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
+<body>
+<header>
+
+<section id="main-navi">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"><img src="pic1.png"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="profile.php">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About Us</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Book Collection
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Collections</a>
+          <a class="dropdown-item" href="#">Authors</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Others</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="logout.php" tabindex="-1" aria-disabled="true">Log-Out</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav> 
+    </div>
+
+<div id="mainslider" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#mainslider" data-slide-to="0" class="active"></li>
+    <li data-target="#mainslider" data-slide-to="1"></li>
+    <li data-target="#mainslider" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+     
+      <div class="caption">
+        <h5>MANDATE</h5>
+        <h6>Section 2 of Republic Act No. 8468 “An Act Converting the Don Severino Agricultural College in the Municipality of Indang, Province of Cavite into a State University, to be Known as the Cavite State University” states that,
+“The University shall primarily provide advance instruction and professional training in agriculture, science and technology, education and other related fields, undertake research and extension services, and provide progressive leadership in these areas.”</h6>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="caption">
+        <h5>MISSION</h5>
+        <h6>Cavite State University shall provide excellent, equitable, and relevant educational opportunities in the arts, sciences and technology through quality instruction and responsive research and development activities.
+It shall produce professional, skilled and morally upright individuals for global competitiveness.</h6>
+  <h5>VISION</h5>
+        <h6>The Premier University in historic Cavite recognized for excellence in the development of globally and morally upright individuals.</h6>
+        
+      </div>
+    </div>
+    <div class="carousel-item">
+       <div class="caption">
+      <h5>OUR TEAM</h5>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#mainslider" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#mainslider" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+</header>
+</body>
 </html>
